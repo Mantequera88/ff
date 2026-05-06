@@ -16,13 +16,13 @@
                     colors: { brand: '#FF6600' },
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     fontSize: {
-                        'fluid-nav': 'clamp(1.1rem, 1.5vw, 1.5rem)',         
-                        'fluid-hero': 'clamp(3.5rem, 6vw + 1rem, 7rem)',     
-                        'fluid-h3': 'clamp(1.75rem, 3vw, 3rem)',             
-                        'fluid-p': 'clamp(1.1rem, 1.5vw, 1.5rem)',           
-                        'fluid-badge': 'clamp(1rem, 1.2vw, 1.25rem)',        
-                        'fluid-icon': 'clamp(2rem, 4vw, 4rem)',              
-                        'fluid-btn': 'clamp(1.1rem, 1.5vw, 1.5rem)'          
+                        'fluid-nav': 'clamp(0.7rem, 1.1vw, 0.875rem)',         
+                        'fluid-hero': 'clamp(2.2rem, 5vw, 4.5rem)',     
+                        'fluid-h3': 'clamp(1.1rem, 2.2vw, 1.75rem)',             
+                        'fluid-p': 'clamp(0.8rem, 1.1vw, 1rem)',           
+                        'fluid-badge': 'clamp(0.7rem, 1vw, 0.875rem)',        
+                        'fluid-icon': 'clamp(1.5rem, 3vw, 2.5rem)',              
+                        'fluid-btn': 'clamp(0.8rem, 1.2vw, 1rem)'          
                     }
                 }
             }
@@ -98,14 +98,14 @@
         .chatbot-button { position: fixed; bottom: 30px; right: 30px; width: clamp(60px, 6vw, 70px); height: clamp(60px, 6vw, 70px); border-radius: 50%; background: linear-gradient(135deg, #FF6600, #FF8C00); color: white; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; box-shadow: 0 10px 30px rgba(255, 102, 0, 0.5); display: flex; align-items: center; justify-content: center; font-size: clamp(30px, 3.1vw, 37px); transition: all 0.3s ease; z-index: 1000; }
         .chatbot-button:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 15px 35px rgba(255, 102, 0, 0.6); }
         .chatbot-button.active { background: #e74c3c; transform: rotate(90deg); border-color: rgba(255,255,255,0.1); }
-        .chatbot-window { position: fixed; bottom: 120px; right: 30px; width: clamp(360px, 35vw, 450px); height: clamp(500px, 55vh, 700px); background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 2rem; box-shadow: 0 30px 60px rgba(0,0,0,0.4); display: none; flex-direction: column; overflow: hidden; z-index: 1000; }
+        .chatbot-window { position: fixed; bottom: 120px; right: 30px; width: clamp(280px, min(90vw, 370px), 380px); height: clamp(400px, min(80vh, 650px), 650px); background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 2rem; box-shadow: 0 30px 60px rgba(0,0,0,0.4); display: none; flex-direction: column; overflow: hidden; z-index: 1000; }
         .chatbot-window.active { display: flex; }
-        .chatbot-header { background: rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 25px; display: flex; justify-content: space-between; align-items: center; }
+        .chatbot-header { background: rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; }
         .chatbot-messages { flex: 1; overflow-y: auto; padding: 25px; display: flex; flex-direction: column; gap: 18px; }
-        .message { max-width: 85%; padding: 18px 25px; border-radius: 25px; font-size: clamp(17px, 1.5vw, 20px); color: #000; font-weight: 600; } 
+        .message { max-width: 85%; padding: 10px 16px; border-radius: 18px; font-size: clamp(17px, 1.5vw, 20px); color: #000; font-weight: 600; } 
         .user-message { background: #FF6600; align-self: flex-end; border-bottom-right-radius: 8px; color: white; } 
         .bot-message { background: rgba(255, 255, 255, 0.8); align-self: flex-start; border-bottom-left-radius: 8px; }
-        .chatbot-input-area { padding: 25px; background: rgba(0,0,0,0.1); border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: 15px; }
+        .chatbot-input-area { padding: 14px; background: rgba(0,0,0,0.1); border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: 15px; }
         .chatbot-input-box { flex: 1; padding: 15px 25px; border-radius: 35px; border: none; background: rgba(255,255,255,0.9); outline: none; }
     </style>
 </head>
@@ -130,7 +130,7 @@
                 <img src="logo.png" alt="Logo CEM" class="h-auto w-10 object-contain brightness-0 invert" onerror="this.src='/cem_el_turo_taronja.webp'">
             </a>
             
-            <div class="hidden lg:flex gap-[clamp(1.5rem,2.5vw,3rem)] text-fluid-nav font-bold text-white drop-shadow-md items-center">
+            <div class="hidden md:flex gap-[clamp(1.5rem,2.5vw,3rem)] text-fluid-nav font-bold text-white drop-shadow-md items-center">
                 <a href="index.html" class="hover:text-brand transition-colors">Inici</a>
                 
                 <div class="relative group">

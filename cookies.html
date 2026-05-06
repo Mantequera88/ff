@@ -16,18 +16,18 @@
                     colors: { brand: '#FF6600' },
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     fontSize: {
-                        'fluid-nav': 'clamp(1.24rem, 1.6vw, 1.68rem)',         
-                        'fluid-hero': 'clamp(3.93rem, 6.75vw, 7.87rem)',     
-                        'fluid-h3': 'clamp(1.96rem, 3.37vw, 3.37rem)',             
-                        'fluid-p': 'clamp(1.24rem, 1.6vw, 1.68rem)',           
-                        'fluid-badge': 'clamp(1.12rem, 1.35vw, 1.35rem)',        
-                        'fluid-icon': 'clamp(2.25rem, 4.5vw, 4.5rem)',              
-                        'fluid-btn': 'clamp(1.24rem, 1.6vw, 1.68rem)'      
+                        'fluid-nav': 'clamp(0.7rem, 1.1vw, 0.875rem)',         
+                        'fluid-hero': 'clamp(2.2rem, 5vw, 4.5rem)',     
+                        'fluid-h3': 'clamp(1.1rem, 2.2vw, 1.75rem)',             
+                        'fluid-p': 'clamp(0.8rem, 1.1vw, 1rem)',           
+                        'fluid-badge': 'clamp(0.7rem, 1vw, 0.875rem)',        
+                        'fluid-icon': 'clamp(1.5rem, 3vw, 2.5rem)',              
+                        'fluid-btn': 'clamp(0.8rem, 1.2vw, 1rem)'      
                     },
                     spacing: {
-                        'fluid-p': 'clamp(1.6rem, 3.3vw, 3.3rem)',               
-                        'fluid-icon-box': 'clamp(5rem, 7.8vw, 7.3rem)',
-                        'fluid-nav-logo': 'clamp(2.1rem, 3.1vw, 3.1rem)'           
+                        'fluid-p': 'clamp(0.8rem, 1.1vw, 1rem)',               
+                        'fluid-icon-box': 'clamp(3rem, 5vw, 4.5rem)',
+                        'fluid-nav-logo': 'clamp(1.1rem, 1.8vw, 1.5rem)'           
                     }
                 }
             }
@@ -76,29 +76,29 @@
         
         .chatbot-window {
             position: fixed; bottom: 120px; right: 30px; 
-            width: clamp(360px, 35vw, 450px); height: clamp(500px, 55vh, 700px); 
+            width: clamp(280px, min(90vw, 370px), 380px); height: clamp(400px, min(80vh, 650px), 650px); 
             background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
             border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 2rem;
             box-shadow: 0 30px 60px rgba(0,0,0,0.4); display: none; flex-direction: column; overflow: hidden; z-index: 1000;
         }
         .chatbot-window.active { display: flex; }
         
-        .chatbot-header { background: rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 25px; display: flex; justify-content: space-between; align-items: center; }
-        .chatbot-header h3 { margin: 0; font-size: clamp(20px, 1.8vw, 25px); font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.3); } 
-        .chatbot-header button { background: rgba(255,255,255,0.2); border: none; color: white; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+        .chatbot-header { background: rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; }
+        .chatbot-header h3 { margin: 0; font-size: clamp(14px, 1.3vw, 17px); font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.3); } 
+        .chatbot-header button { background: rgba(255,255,255,0.2); border: none; color: white; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; font-size: 16px; }
         .chatbot-header button:hover { background: rgba(255,255,255,0.4); transform: scale(1.1); }
         
         .chatbot-messages { flex: 1; overflow-y: auto; padding: 25px; display: flex; flex-direction: column; gap: 18px; background: transparent; scroll-behavior: smooth; }
         
         /* TEXTO DEL CHAT EN NEGRO */
-        .message { max-width: 85%; padding: 18px 25px; border-radius: 25px; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.5; color: #000; word-wrap: break-word; font-weight: 600; } 
+        .message { max-width: 85%; padding: 10px 16px; border-radius: 18px; font-size: clamp(12px, 1.1vw, 14px); line-height: 1.4; color: #000; word-wrap: break-word; font-weight: 600; } 
         .user-message { background: #FF6600; align-self: flex-end; border-bottom-right-radius: 8px; box-shadow: 0 4px 15px rgba(255,102,0,0.4); color: white; } 
         .bot-message { background: rgba(255, 255, 255, 0.5); align-self: flex-start; border-bottom-left-radius: 8px; border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px); }
         
-        .chatbot-input-area { padding: 25px; background: rgba(0,0,0,0.1); border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: 15px; }
-        .chatbot-input { flex: 1; padding: 18px 30px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.95); border-radius: 35px; outline: none; color: #000; font-weight: 500; font-size: clamp(17px, 1.5vw, 20px); } 
+        .chatbot-input-area { padding: 14px; background: rgba(0,0,0,0.1); border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: 15px; }
+        .chatbot-input { flex: 1; padding: 10px 18px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.95); border-radius: 35px; outline: none; color: #000; font-weight: 500; font-size: clamp(12px, 1.1vw, 14px); } 
         .chatbot-input:focus { background: white; box-shadow: 0 0 0 4px rgba(255,102,0,0.5); border-color: transparent; }
-        .chatbot-send { width: 60px; height: 60px; border-radius: 50%; background: #FF6600; color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 25px; transition: all 0.3s; flex-shrink: 0; }
+        .chatbot-send { width: 42px; height: 42px; border-radius: 50%; background: #FF6600; color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.3s; flex-shrink: 0; }
         
         .typing-indicator { display: none; padding: 18px 25px; background: rgba(255, 255, 255, 0.5); border-radius: 25px; align-self: flex-start; border-bottom-left-radius: 8px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3); }
         .typing-indicator span { display: inline-block; width: 10px; height: 10px; background: #000; border-radius: 50%; margin: 0 4px; animation: typing 1.4s infinite; }
@@ -139,13 +139,13 @@
     </div>
     <div class="fixed inset-0 bg-slate-900/85 z-[-10] pointer-events-none"></div>
 
-    <nav class="fixed top-6 left-0 right-0 mx-4 lg:mx-auto max-w-[95%] xl:max-w-[1300px] w-full z-50 self-center">
-        <div class="bg-white/20 backdrop-blur-2xl border border-white/40 rounded-full px-[clamp(1.25rem,2.5vw,2.5rem)] py-[clamp(0.6rem,1.25vw,1.25rem)] flex justify-between items-center shadow-[0_15px_30px_rgba(0,0,0,0.2)]">
+    <nav class="fixed top-6 left-0 right-0 mx-4 lg:mx-auto max-w-[98%] xl:max-w-[1560px] w-full z-50 self-center">
+        <div class="bg-white/20 backdrop-blur-2xl border border-white/40 rounded-full px-[clamp(0.9rem,1.8vw,2rem)] py-[clamp(0.55rem,1.1vw,1.1rem)] flex justify-between items-center shadow-[0_15px_30px_rgba(0,0,0,0.2)]">
             <a href="index.html" class="flex items-center shrink-0 bg-brand p-[clamp(0.4rem,0.8vw,0.8rem)] rounded-full hover:scale-105 transition-transform shadow-lg border border-white/20 mr-4">
                 <img src="logo.png" alt="Logo CEM" class="h-auto w-10 object-contain brightness-0 invert" onerror="this.src='/cem_el_turo_taronja.webp'">
             </a>
             
-            <div class="hidden lg:flex gap-[clamp(1.2rem,2vw,2.5rem)] text-fluid-nav font-bold text-white drop-shadow-md items-center">
+            <div class="hidden md:flex gap-[clamp(0.6rem,1.1vw,1.5rem)] text-fluid-nav font-bold text-white drop-shadow-md items-center">
                 <a href="index.html" class="hover:text-brand transition-colors">Inici</a>
                 
                 <div class="relative group">
@@ -301,8 +301,8 @@
                 <p class="text-white/90 font-medium text-base">CEM EL TURÓ</p>
                 <p class="text-white/70">c/ Joaquim Blume, nº2<br>08120, La Llagosta</p>
                 <div class="mt-2">
-                    <a href="tel:935451550" class="text-white hover:text-brand font-bold block mb-1 transition-colors">📞 93 545 15 50</a>
-                    <a href="mailto:info@cemelturo.com" class="text-white/80 hover:text-brand font-medium transition-colors">✉️ info@cemelturo.com</a>
+                    <a href="tel:935451550" class="text-white hover:text-brand font-bold block mb-1 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;width:1.1em;height:1.1em;vertical-align:-0.15em;margin-right:0.3em"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>93 545 15 50</a>
+                    <a href="mailto:info@cemelturo.com" class="text-white/80 hover:text-brand font-medium transition-colors"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;width:1.1em;height:1.1em;vertical-align:-0.15em;margin-right:0.3em"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>info@cemelturo.com</a>
                 </div>
             </div>
             <div class="flex flex-col gap-3">
