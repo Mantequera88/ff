@@ -65,7 +65,7 @@
             font-size: clamp(30px, 3.1vw, 37px); transition: all 0.3s ease; z-index: 1000;
         }
         .chatbot-button:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 15px 35px rgba(255, 102, 0, 0.6); }
-        .chatbot-button.active { background: #e74c3c; transform: rotate(90deg); border-color: rgba(255,255,255,0.1); }
+        .chatbot-button.active { background: linear-gradient(135deg, #FF6600, #FF8C00); border-color: rgba(255,255,255,0.4); box-shadow: 0 10px 30px rgba(255, 102, 0, 0.7); }
         
         .chatbot-window {
             position: fixed; bottom: 120px; right: 30px; 
@@ -290,13 +290,13 @@
         </div>
     </footer>
 
-    <div class="chatbot-button" id="chatbotButton">
-        <i class="fas fa-comment"></i>
+        <div class="chatbot-button active" id="chatbotButton">
+        <img src="data:image/png;base64,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" alt="CEM El Turó" style="width:80%;height:80%;object-fit:contain;border-radius:50%;">
     </div>
 
-    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-window active" id="chatbotWindow">
         <div class="chatbot-header">
-            <h3><i class="fas fa-robot" style="margin-right: 10px;"></i> Assistent El Turó</h3>
+            <h3><img src="data:image/png;base64,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" alt="CEM El Turó" style="height:28px;margin-right:10px;vertical-align:middle;"> Assistent El Turó</h3>
             <button id="closeChatbot"><i class="fas fa-times"></i></button>
         </div>
         <div class="chatbot-messages no-scrollbar" id="chatbotMessages">
@@ -315,7 +315,7 @@
         </div>
     </div>
 
-    <script>
+        <script>
         const chatbotButton = document.getElementById('chatbotButton');
         const chatbotWindow = document.getElementById('chatbotWindow');
         const closeChatbot = document.getElementById('closeChatbot');
@@ -324,12 +324,14 @@
         const chatbotSend = document.getElementById('chatbotSend');
         const typingIndicator = document.getElementById('typingIndicator');
 
+        // Chatbot sempre actiu per defecte
+        chatbotWindow.classList.add('active');
+        chatbotButton.classList.add('active');
+
         chatbotButton.addEventListener('click', () => {
             chatbotWindow.classList.toggle('active');
             chatbotButton.classList.toggle('active');
-            if (chatbotWindow.classList.contains('active')) {
-                chatbotInput.focus();
-            }
+            if (chatbotWindow.classList.contains('active')) { chatbotInput.focus(); }
         });
 
         closeChatbot.addEventListener('click', () => {
@@ -360,32 +362,46 @@
             const message = chatbotInput.value.trim();
             if (!message) return;
 
-            chatbotInput.disabled = true; 
+            chatbotInput.disabled = true;
             chatbotSend.disabled = true;
             addChatMessage(message, true);
             chatbotInput.value = '';
             showTyping();
 
             try {
-                const response = await fetch('http://localhost:5000/chat', {
+                const response = await fetch('https://api.deepseek.com/chat/completions', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: message })
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer sk-9946d7c4b397427681466a5c9a98934b'
+                    },
+                    body: JSON.stringify({
+                        model: 'deepseek-chat',
+                        messages: [
+                            {
+                                role: 'system',
+                                content: 'Eres un asistente virtual del CEM El Turo, un complejo deportivo municipal de La Llagosta (Barcelona). Responde en el mismo idioma que el usuario (catalan o castellano). Si no sabes algo, sugiere llamar al 93 545 15 50 o visitar www.cemelturo.cat. Se breve, amable, no inventes datos.'
+                            },
+                            { role: 'user', content: message }
+                        ],
+                        max_tokens: 500,
+                        temperature: 0.3
+                    })
                 });
-                
+
                 const data = await response.json();
-                
-                if (response.ok) { 
-                    addChatMessage(data.response); 
-                } else { 
-                    addChatMessage('Error: No s\'ha pogut obtenir resposta.'); 
+
+                if (response.ok && data.choices && data.choices[0]) {
+                    addChatMessage(data.choices[0].message.content);
+                } else {
+                    addChatMessage("Error: No s'ha pogut obtenir resposta. Truca al 93 545 15 50.");
                 }
             } catch (error) {
-                addChatMessage('Error de connexió al servidor.');
+                addChatMessage("Error de connexió. Truca al 93 545 15 50 o visita www.cemelturo.cat");
             } finally {
-                chatbotInput.disabled = false; 
+                chatbotInput.disabled = false;
                 chatbotSend.disabled = false;
-                hideTyping(); 
+                hideTyping();
                 chatbotInput.focus();
             }
         }
